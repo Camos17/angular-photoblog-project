@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Http } from '@angular/http';
+import { EntryService } from '../shared/entry.service';
 
 @Component({
 	selector: 'app-entry-list',
@@ -7,8 +7,7 @@ import { Http } from '@angular/http';
 	styleUrls: ['entry-list.component.css']
 }) 
 export class EntryListComponent {
-	constructor(http: Http) {
-		http.get('/app/enries').toPromise()
-			.then(response => {debugger}, error => {debugger});
+	constructor(private entryService: EntryService) {
+		
 	}
 }
