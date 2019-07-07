@@ -1,4 +1,4 @@
-<h3>Entry Properties</h3>
+<h3>Entry Comments</h3>
 
 <h2>{{entry.title}}</h2>
 <figure>
@@ -13,4 +13,5 @@
 	<div class="comment" *ngFor="let comment of entry.comments">
 		<p><strong>{{comment.name}}</strong> {{comment.comment}}</p>
 	</div>
+	<app-entry-comment-form></app-entry-comment-form>
 </div>

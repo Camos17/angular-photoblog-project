@@ -1,3 +1,4 @@
+// En este archivo estan consignados todos los módulos agregados a la aplicación.
 // angular
 import '@angular/core';
 import '@angular/common';
