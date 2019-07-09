@@ -27,5 +27,12 @@ module.exports = webpackMerge(commonConfig, {
         'ENV': JSON.stringify(ENV)
       }
     })
-  ]
+  ],  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  }
 });

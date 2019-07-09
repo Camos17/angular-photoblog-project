@@ -11,3 +11,7 @@ import '@angular/forms';
 import 'core-js';
 import 'rxjs';
 import 'angular-in-memory-web-api';
+import 'jquery';
+import 'popper.js';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
