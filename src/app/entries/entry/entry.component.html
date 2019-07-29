@@ -14,5 +14,5 @@
 		<p><strong>{{comment.name}}</strong> {{comment.comment}}</p>
 	</div>
 	<!-- The $event value es el valor emitido por el 'child event emmiter' -->
-	<app-entry-comment-form (onCommentAdded1)="onCommentAdded($event)"></app-entry-comment-form>
+	<app-entry-comment-form (onCommentAdded1)="onCommentAdded($event)" [entryId]="entry.id"></app-entry-comment-form>
 </div>

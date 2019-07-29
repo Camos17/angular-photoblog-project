@@ -12,6 +12,12 @@ export class EntryService {
 	}
 
 	// METÓDOS
+	// Metódo addComment se encargará de enviar el comentario registrado hacia el servidor BAck-End.
+	addComment(entryId: number, comment: { name: string, comment: string; }) {
+		return this.http.post(`/app/entries/${entryId}/comments`, comment)
+				.toPromise();
+	}
+
 	// Metódo getEntries para recuperar la fecha a través del Http Service. Retornará una Promesa que se resolverá con un arreglo de 'entries'.
 	// Para especificar el tipo de de dato que retornará el mmétodo se agregan ':' despues de los parentesis del mismo.
 	getEntries(): Promise<Entry[]> {
