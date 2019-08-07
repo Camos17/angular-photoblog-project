@@ -10,7 +10,7 @@ module.exports = webpackMerge(commonConfig, {
   devtool: 'cheap-module-eval-source-map',
 
   output: {
-    publicPath: 'http://localhost:4201'
+    publicPath: 'http://localhost:4200'
   },
 
   plugins: [

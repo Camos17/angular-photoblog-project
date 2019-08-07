@@ -12,11 +12,13 @@ export class EntryCommentFormComponent {
 	comment: string = "";
 	@Input() entryId: number;
 	@Output() onCommentAdded1 = new EventEmitter<{name: string; comment: string;}>();
+	// Registra cambios en variables ocacles creadas en el template del componente.
 	@ViewChild('commentForm') commentForm: NgForm;
 
 	constructor(private entryService: EntryService) {}
 
 	onSubmit(commentForm: NgForm) {
+		if (this.commentForm.invalid) return;
 		let comment = { name: this.name, comment: this.comment };
 		this.entryService.addComment(this.entryId, comment)
 			.then(() =>  {
